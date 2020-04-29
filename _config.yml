@@ -57,7 +57,7 @@ plugins:
 
 author:
   name   : "Alicia Sabatino"
-  avatar : "/assets/images/bio-pic.png"
+  avatar : "/assets/images/bio_pic.png"
   bio    : "Geography Masters Student at UMBC working in the Mapping Capital lab"
   links:
     - label: "Mapping.Capital"
