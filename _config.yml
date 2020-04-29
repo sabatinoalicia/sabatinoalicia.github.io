@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Alicia Sabatino
-email:
+email: alicia15@umbc.edu
 description: >- # this means to ignore newlines until "baseurl:"
 
 twitter_username: aliciacsabatino
@@ -57,7 +57,7 @@ plugins:
 
 author:
   name   : "Alicia Sabatino"
-  avatar : "/assets/images/bio-photo.jpg"
+  avatar : "/assets/images/bio-pic.png"
   bio    : "Geography Masters Student at UMBC working in the Mapping Capital lab"
   links:
     - label: "Mapping.Capital"
