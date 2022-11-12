@@ -3,3 +3,5 @@ title: Acknowledgments
 ---
 
 This repo and GitHub Action was based on the tutorial by Openscapes [quarto-website-tutorial](https://github.com/Openscapes/quarto-website-tutorial) by Julia Lowndes and Stefanie Butland.
+
+GES 660 was taught by [Eli Pousson](https://github.com/Openscapes/quarto-website-tutorial](https://elipousson.github.io/) at UMBC in the GES department. 
