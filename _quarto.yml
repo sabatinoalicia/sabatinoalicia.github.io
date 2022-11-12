@@ -14,18 +14,18 @@ website:
     left: "&copy; CC-1.0"
   
   sidebar:
-    background: "#D9E3E4"
-    logo: "https://raw.githubusercontent.com/nmfs-opensci/assets/main/logo/nmfs-opensci-logo3.png"
+    background: "#A73E45"
+    logo: "https://aliciasab.github.io/images/alicia_graphic.png"
     favicon: images/favicon.ico
     pinned: true
     align: center
     tools: 
       - icon: globe
-        href: https://nmfs-opensci.github.io
-        text: "NMFS Open Science"
+        href: https://alicias.io
+        text: "portfolio"
       - icon: github
-        href: https://github.com/nmfs-opensci
-        text: "NMFS OpenSci"
+        href: https://github.com/aliciasab
+        text: "other github"
 
     style: "docked"
     search: true
