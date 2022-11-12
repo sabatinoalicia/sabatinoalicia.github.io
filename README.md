@@ -1,4 +1,4 @@
-# Template from [a simple Quarto website](https://nmfs-opensci.github.io/NOAA-quarto-simple/) (`type: website`). 
+# Template from [a simple Quarto website](https://nmfs-opensci.github.io/NOAA-quarto-simple/). 
 
 ## I am using this for one of my classes in grad school that encourages the use of quarto pages
 
