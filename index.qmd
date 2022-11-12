@@ -15,3 +15,6 @@ In GES660 Building Spatial Datasets we are learning how to work with spatial dat
 *
 *
 *
+
+## Assignments and Projects
+
