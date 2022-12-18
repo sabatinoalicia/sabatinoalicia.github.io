@@ -1,0 +1,61 @@
+---
+title: "Final Project"
+format: html
+execute:
+  echo: false
+editor: visual
+---
+
+
+```{r message = FALSE, warning= FALSE}
+
+library(mapboxapi)
+library(leaflet)
+library(sf)
+
+pris_pop <-st_read("https://raw.githubusercontent.com/sabatinoalicia/sabatinoalicia.github.io/main/data/md_prisons.geojson", quiet= TRUE)
+
+ethnicities <- c("white", "black", "hispanic", "native", "other")
+colors <- c("#6C26E3", "#C8A437", "#DC2E2E", "#62EA8F" , "#EA1AE6")
+
+df <- data.frame (ethnicity  = ethnicities,
+                  numbers = c(1,2,3,4,5))
+
+
+pal <- colorFactor(
+  palette = c( "#C8A437","#DC2E2E", "#EA1AE6", "#62EA8F" , "#6C26E3"),
+  domain =  df$ethnicity
+)
+
+html_legend <- "<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Circle_Grey_Solid.svg/1200px-Circle_Grey_Solid.svg.png'width='7' height='7'> federal prison<br/>
+<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Triangle_gray.svg/1200px-Triangle_gray.svg.png' width='7' height='7'> state prison<br/>
+<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Square_gray.svg/1200px-Square_gray.svg.png' width='7' height='7'> local jail"
+
+markers <- iconList(
+  "fed_pris" = makeIcon(
+    iconUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Circle_Grey_Solid.svg/1200px-Circle_Grey_Solid.svg.png",
+    iconWidth = 7,
+    iconHeight = 7
+  ),
+  "state_pris" = makeIcon(
+    iconUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Triangle_gray.svg/1200px-Triangle_gray.svg.png",
+    iconWidth = 7,
+    iconHeight = 7
+  ),
+  "local_jail" = makeIcon(
+    iconUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Square_gray.svg/1200px-Square_gray.svg.png",
+    iconWidth = 7,
+    iconHeight = 7
+  )
+)
+
+leaflet() %>%
+  setView(-76.6122,39.2904, zoom = 7)  %>%
+  addMapboxTiles(style_id = "clbayh4cd000115qlo4mprr4r",
+                 username = "alicia15") %>%
+  addLegend(pal = pal, values = df$ethnicity, title = "Ethnicity") %>%
+  addMarkers(lng = pris_pop$lon, lat = pris_pop$lat, icon = markers[pris_pop$type],
+            popup = paste(pris_pop$inmates, "inmates,", pris_pop$NAME)) %>%
+  addControl(html = html_legend, position = "bottomleft")
+
+```
