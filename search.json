@@ -133,6 +133,13 @@
     "text": "Step 3. Render within RStudio\nRStudio will recognize that this is a Quarto project by the presence of the _quarto.yml file and will see the “Build” tab. Click the “Render website” button to render to the _site folder.\nPreviewing: You can either click index.html in the _site folder and specify “preview in browser” or set up RStudio to preview to the viewer panel. To do the latter, go to Tools > Global Options > R Markdown. Then select “Show output preview in: Viewer panel”."
   },
   {
+    "objectID": "data/data.html",
+    "href": "data/data.html",
+    "title": "Alicia Sabatino",
+    "section": "",
+    "text": "data needed for website"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Alicia Sabatino’s Quarto Site",
