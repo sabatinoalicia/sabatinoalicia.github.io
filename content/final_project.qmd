@@ -6,7 +6,6 @@ execute:
 editor: visual
 ---
 
-
 ```{r message = FALSE, warning= FALSE}
 
 library(mapboxapi)
